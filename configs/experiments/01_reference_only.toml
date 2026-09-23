@@ -1,0 +1,8 @@
+[experiment]
+name = "01_reference_only"
+description = "Original images only: the cleanest reference-style baseline."
+sources = ["images"]
+trigger = "SATURNIA_STYLE"
+caption_policy = "content_only"
+holdout_fraction = 0.10
+split_seed = 271828

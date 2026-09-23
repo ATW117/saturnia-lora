@@ -1,0 +1,16 @@
+[model]
+name = "qwen_image_2512"
+# Set QWEN_IMAGE_2512_PATH to your existing local Diffusers-format install.
+name_or_path = "${QWEN_IMAGE_2512_PATH:-Qwen/Qwen-Image-2512}"
+arch = "qwen_image:2512"
+device = "cuda:0"
+quantize = false
+quantize_te = false
+low_vram = false
+cache_text_embeddings = true
+
+[sample]
+width = 1024
+height = 1024
+steps = 25
+guidance_scale = 4.0

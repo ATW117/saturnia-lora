@@ -1,0 +1,17 @@
+[model]
+name = "flux2_klein_4b"
+# Set FLUX2_KLEIN_BASE_PATH to your local Diffusers-format install if desired.
+# The distilled FLUX.2-klein-4B is intentionally not the training target.
+name_or_path = "${FLUX2_KLEIN_BASE_PATH:-black-forest-labs/FLUX.2-klein-base-4B}"
+arch = "flux2_klein_4b"
+device = "cuda:0"
+quantize = false
+quantize_te = false
+low_vram = false
+cache_text_embeddings = true
+
+[sample]
+width = 1024
+height = 1024
+steps = 28
+guidance_scale = 4.0

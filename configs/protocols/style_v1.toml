@@ -1,0 +1,19 @@
+[train]
+# Keep these fixed across the matrix. Change one field at a time and give the
+# resulting protocol a new filename when doing a hyperparameter study.
+steps = 2000
+batch_size = 1
+gradient_accumulation = 1
+learning_rate = 0.00008
+optimizer = "adamw8bit"
+rank = 32
+alpha = 32
+dtype = "bf16"
+gradient_checkpointing = true
+timestep_type = "weighted"
+resolutions = [512, 768, 1024]
+caption_dropout_rate = 0.0
+save_every = 250
+max_step_saves_to_keep = 8
+sample_every = 250
+sample_seed = 314159

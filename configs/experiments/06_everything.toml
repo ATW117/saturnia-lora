@@ -1,0 +1,14 @@
+[experiment]
+name = "06_everything"
+description = "Originals plus every accepted synthetic subset."
+sources = [
+  "images",
+  "synthetic/core_organic",
+  "synthetic/color_organic",
+  "synthetic/humanoid_core_palette",
+  "synthetic/humanoid_color",
+]
+trigger = "SATURNIA_STYLE"
+caption_policy = "content_only"
+holdout_fraction = 0.10
+split_seed = 271828

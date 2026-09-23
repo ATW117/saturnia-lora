@@ -1,0 +1,8 @@
+[experiment]
+name = "03_synthetic_core_color"
+description = "Core organic plus color organic synthetic sets."
+sources = ["synthetic/core_organic", "synthetic/color_organic"]
+trigger = "SATURNIA_STYLE"
+caption_policy = "content_only"
+holdout_fraction = 0.10
+split_seed = 271828

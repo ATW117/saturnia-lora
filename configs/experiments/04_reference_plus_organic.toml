@@ -1,0 +1,8 @@
+[experiment]
+name = "04_reference_plus_organic"
+description = "Originals plus both organic synthetic sets."
+sources = ["images", "synthetic/core_organic", "synthetic/color_organic"]
+trigger = "SATURNIA_STYLE"
+caption_policy = "content_only"
+holdout_fraction = 0.10
+split_seed = 271828

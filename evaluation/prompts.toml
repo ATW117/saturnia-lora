@@ -1,0 +1,42 @@
+# These prompts are sampled at step 0 and every checkpoint. Step 0 is the base
+# model control. Keep the text and seed fixed when comparing dataset variants.
+
+[[prompt]]
+id = "organic_in_distribution"
+category = "in_distribution"
+text = "[trigger]. A small moth-beetle creature with folded wings and rootlike feet, centered against an open background."
+
+[[prompt]]
+id = "organic_recombination"
+category = "recombination"
+text = "[trigger]. A translucent snail-mantis carrying a flowering seed pod across a narrow bridge."
+
+[[prompt]]
+id = "humanoid_transfer"
+category = "transfer"
+text = "[trigger]. A dignified orchid-headed librarian with human hands arranging specimens in a greenhouse."
+
+[[prompt]]
+id = "unseen_vehicle"
+category = "out_of_distribution"
+text = "[trigger]. A compact electric bicycle parked beside a weathered stone wall."
+
+[[prompt]]
+id = "unseen_architecture"
+category = "out_of_distribution"
+text = "[trigger]. A quiet railway station with an iron clock and three empty benches."
+
+[[prompt]]
+id = "palette_control_muted"
+category = "palette"
+text = "[trigger]. A long-legged bird-frog in muted ochre, coral, olive, and graphite gray."
+
+[[prompt]]
+id = "palette_control_vivid"
+category = "palette"
+text = "[trigger]. A long-legged bird-frog in vivid cobalt, magenta, turquoise, and saffron."
+
+[[prompt]]
+id = "multi_subject"
+category = "composition"
+text = "[trigger]. Three different botanical creatures gathered around a teapot beneath tall reeds."

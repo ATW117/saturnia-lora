@@ -1,0 +1,8 @@
+[experiment]
+name = "02_synthetic_core"
+description = "Core organic synthetic set only."
+sources = ["synthetic/core_organic"]
+trigger = "SATURNIA_STYLE"
+caption_policy = "content_only"
+holdout_fraction = 0.10
+split_seed = 271828
