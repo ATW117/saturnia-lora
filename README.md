@@ -12,12 +12,15 @@
 
 | Example | Base model | + Saturnia LoRA |
 | :-- | :--: | :--: |
-| **Vivid bird-frog** · seed `314159` | <img src="docs/preview/vivid-frog-base.jpg" alt="Base model vivid cobalt and magenta bird-frog" width="270"> | <img src="docs/preview/vivid-frog-lora.jpg" alt="Vivid bird-frog in Saturnia pencil style" width="270"> |
-| **Damselfly on a fern** · seed `271854` | <img src="docs/preview/damselfly-base.jpg" alt="Base model damselfly on a fern" width="270"> | <img src="docs/preview/damselfly-lora.jpg" alt="Damselfly on a fern with Saturnia LoRA" width="270"> |
-| **Beetle-bird gathering** · seed `271837` | <img src="docs/preview/beetle-birds-base.jpg" alt="Base model beetle-bird creatures around a dandelion" width="270"> | <img src="docs/preview/beetle-birds-lora.jpg" alt="Beetle-bird creatures around a dandelion with Saturnia LoRA" width="270"> |
+| **Vivid bird-frog** · seed `314159` | <img src="docs/preview/vivid-frog-base.jpg" alt="Base model vivid bird-frog" width="270"> | <img src="docs/preview/vivid-frog-lora.jpg" alt="Vivid bird-frog with the synthetic-core Saturnia LoRA" width="270"> |
+| **Walking bromeliad** · seed `314159` | <img src="docs/preview/walking-bromeliad-base.jpg" alt="Base model walking bromeliad" width="270"> | <img src="docs/preview/walking-bromeliad-lora.jpg" alt="Walking bromeliad with Saturnia LoRA" width="270"> |
+| **Caterpillar with bluebells** · seed `314159` | <img src="docs/preview/caterpillar-bluebells-base.jpg" alt="Base model caterpillar carrying bluebells" width="270"> | <img src="docs/preview/caterpillar-bluebells-lora.jpg" alt="Caterpillar carrying bluebells with Saturnia LoRA" width="270"> |
+| **Botanical dolphin-spider** · seed `42` | <img src="docs/preview/dolphin-spider-base.jpg" alt="Base model botanical dolphin creature with spider legs" width="270"> | <img src="docs/preview/dolphin-spider-lora.jpg" alt="Botanical dolphin creature with spider legs and Saturnia LoRA" width="270"> |
 | **Railway station** · seed `314159` | <img src="docs/preview/railway-station-base.jpg" alt="Base model railway station" width="270"> | <img src="docs/preview/railway-station-lora.jpg" alt="Railway station in Saturnia pencil style" width="270"> |
 
-The vivid frog uses the same prompt on both sides: `SATURNIA_STYLE. A long-legged bird-frog in vivid cobalt, magenta, turquoise, saffron, and coral.` Both images use seed `314159`, 28 steps, and guidance `4.0`; only the LoRA changes. The frog, damselfly, beetle-birds, and railway station use the `06_everything` adapter at step 2,000 and strength `1.0`. These are selected visual examples, not a quantitative benchmark.
+The vivid frog uses the same prompt on both sides: `SATURNIA_STYLE. A long-legged bird-frog in vivid cobalt, magenta, turquoise, and saffron.` Both images use seed `314159`, 28 steps, and guidance `4.0`; the base is the step-zero sample and the right image uses `02_synthetic_core` at step 2,000. The bromeliad, caterpillar, and railway station use `06_everything` at step 2,000 and LoRA strength `1.0`.
+
+The dolphin-spider pair uses the prompt `SATURNIA_STYLE. A small botanical dolphin creature on warm paper with spider legs.`, seed `42`, 28 steps, and guidance `4.0` on both sides. The right image uses `06_everything` at strength `0.8`. These are selected visual examples, not a quantitative benchmark.
 
 ## What is in the repository
 
@@ -25,7 +28,7 @@ The vivid frog uses the same prompt on both sides: `SATURNIA_STYLE. A long-legge
 - `configs/`: six dataset compositions, a fixed training protocol, and model profiles. FLUX.2 Klein 4B is the current focus; the Qwen profile is retained for a later comparison.
 - `evaluation/`: fixed prompts and a qualitative checkpoint rubric.
 - `saturnia_ui.py` and `compiled_lora.py`: a local Gradio UI and optional compiled LoRA inference path for the Klein setup.
-- `docs/preview/`: only the ten images displayed above.
+- `docs/preview/`: only the twelve images displayed above.
 
 The six experiments span reference only, synthetic only, and combined datasets. The local study had 161 accepted image/caption pairs before holdouts. Dataset files are intentionally excluded, so a fresh clone can inspect the catalog and tests but cannot prepare or train until matching local sources are supplied.
 
