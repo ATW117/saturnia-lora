@@ -17,8 +17,14 @@
 | **Caterpillar with bluebells** · seed `314159` | <img src="docs/preview/caterpillar-bluebells-base.jpg" alt="Base model caterpillar carrying bluebells" width="270"> | <img src="docs/preview/caterpillar-bluebells-lora.jpg" alt="Caterpillar carrying bluebells with Saturnia LoRA" width="270"> |
 | **Botanical dolphin-spider** · seed `42` | <img src="docs/preview/dolphin-spider-base.jpg" alt="Base model botanical dolphin creature with spider legs" width="270"> | <img src="docs/preview/dolphin-spider-lora.jpg" alt="Botanical dolphin creature with spider legs and Saturnia LoRA" width="270"> |
 | **Railway station** · seed `314159` | <img src="docs/preview/railway-station-base.jpg" alt="Base model railway station" width="270"> | <img src="docs/preview/railway-station-lora.jpg" alt="Railway station in Saturnia pencil style" width="270"> |
+| **Beetle ornate A** · seed `314159` | <img src="docs/preview/beetle-ornate-a-base.jpg" alt="Base model ornate beetle with botanical shell and sprout" width="270"> | <img src="docs/preview/beetle-ornate-a-lora.jpg" alt="Ornate beetle with botanical shell and sprout generated with Saturnia LoRA" width="270"> |
+| **Snail patterned B** · seed `314159` | <img src="docs/preview/snail-patterned-b-base.jpg" alt="Base model many-eyed patterned snail" width="270"> | <img src="docs/preview/snail-patterned-b-lora.jpg" alt="Many-eyed patterned snail generated with Saturnia LoRA" width="270"> |
+| **Azure snail-frog** · seed `314159` | <img src="docs/preview/azure-snail-frog-base.jpg" alt="Base model azure snail-frog hybrid" width="270"> | <img src="docs/preview/azure-snail-frog-lora.jpg" alt="Azure snail-frog hybrid generated with Saturnia LoRA" width="270"> |
+| **Orange fungal tortoise** · seed `314159` | <img src="docs/preview/orange-fungal-tortoise-base.jpg" alt="Base model orange tortoise carrying a mushroom garden" width="270"> | <img src="docs/preview/orange-fungal-tortoise-lora.jpg" alt="Orange tortoise carrying a mushroom garden generated with Saturnia LoRA" width="270"> |
+| **Violet cicada-human** · seed `314159` | <img src="docs/preview/violet-cicada-human-base.jpg" alt="Base model violet cicada-human with cyan wings" width="270"> | <img src="docs/preview/violet-cicada-human-lora.jpg" alt="Violet cicada-human with cyan wings generated with Saturnia LoRA" width="270"> |
+| **Golden spider weaver** · seed `314159` | <img src="docs/preview/golden-spider-weaver-base.jpg" alt="Base model golden spider-human weaving turquoise threads" width="270"> | <img src="docs/preview/golden-spider-weaver-lora.jpg" alt="Golden spider-human weaving turquoise threads generated with Saturnia LoRA" width="270"> |
 
-The vivid frog uses the same prompt on both sides: `SATURNIA_STYLE. A long-legged bird-frog in vivid cobalt, magenta, turquoise, and saffron.` Both images use seed `314159`, 28 steps, and guidance `4.0`; the base is the step-zero sample and the right image uses `02_synthetic_core` at step 2,000. The bromeliad, caterpillar, and railway station use `06_everything` at step 2,000 and LoRA strength `1.0`.
+The vivid frog uses the same prompt on both sides: `SATURNIA_STYLE. A long-legged bird-frog in vivid cobalt, magenta, turquoise, and saffron.` Both images use seed `314159`, 28 steps, and guidance `4.0`; the base is the step-zero sample and the right image uses `02_synthetic_core` at step 2,000. The bromeliad, caterpillar, railway station, and six additional examples use `06_everything` at step 2,000 and LoRA strength `1.0`.
 
 The dolphin-spider pair uses the prompt `SATURNIA_STYLE. A small botanical dolphin creature on warm paper with spider legs.`, seed `42`, 28 steps, and guidance `4.0` on both sides. The right image uses `06_everything` at strength `0.8`. These are selected visual examples, not a quantitative benchmark.
 
@@ -28,7 +34,7 @@ The dolphin-spider pair uses the prompt `SATURNIA_STYLE. A small botanical dolph
 - `configs/`: six dataset compositions, a fixed training protocol, and model profiles. FLUX.2 Klein 4B is the current focus; the Qwen profile is retained for a later comparison.
 - `evaluation/`: fixed prompts and a qualitative checkpoint rubric.
 - `saturnia_ui.py` and `compiled_lora.py`: a local Gradio UI and optional compiled LoRA inference path for the Klein setup.
-- `docs/preview/`: only the twelve images displayed above.
+- `docs/preview/`: only the twenty-four generated images displayed above.
 
 The six experiments span reference only, synthetic only, and combined datasets. The local study had 161 accepted image/caption pairs before holdouts. Dataset files are intentionally excluded, so a fresh clone can inspect the catalog and tests but cannot prepare or train until matching local sources are supplied.
 
